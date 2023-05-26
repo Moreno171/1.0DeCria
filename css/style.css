@@ -1,0 +1,353 @@
+:root {
+    --primary-color: #eead2d;
+    --icon-color: #252525;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: grid;
+    grid-template-areas: "content";
+    color: #fff;
+    background-color: #000;
+}
+
+header {
+    /* position: fixed;  */
+    grid-area: content;
+    place-self: start center;
+    z-index: 666;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0, 0, 0) transparent;
+
+}
+
+
+main {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+
+section {
+    height: 100vh;
+}
+
+footer {
+    grid-area: content;
+    place-self: end center;
+    display: grid;
+    place-content: center;
+    height: 50px;
+    border-top: 2px solid #eead2d;
+    font-family: 'Trade Winds', cursive;
+    color: #302f2f;
+}
+
+.menu{
+    display: flex;
+    gap: 2vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.somos{
+    background-color: rebeccapurple;
+    width: 100%;
+}
+
+.noticias{
+    background: #FFFAF0;
+    width: 100%;
+}
+
+.fazemos{
+    background: #FFFAF0;
+    width: 100%;
+}
+.missao{
+    background-color: #EFE3CC;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+.contato{
+   background-color: rgb(245, 241, 18);
+    width: 100%;
+    height: 40%;
+}
+
+.Carrossel{
+   /* background-color: rgb(70, 68, 71); */
+   display: flex;
+   /* background: aliceblue; */
+   margin-top: 5em;
+   margin-left: 20vh;
+   /* width: 100%; */
+   background-size: 100%;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input{ 
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+}
+
+.slide img{
+    width: 800px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid green;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: green;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: 0;
+}
+#radio3:checked ~ .first{
+    margin-left: 0;
+}
+#radio4:checked ~ .first{
+    margin-left: -25%;
+}
+
+
+
+
+
+
+
+
+
+
+/* **************************************** */
+
+.section__title3 {
+    grid-area: title;
+    font-size: 220px;
+    text-align: center;
+    place-items: center;
+    justify-content: center;
+    background: linear-gradient(#EFE3CC, #C6CF86);
+    background-clip: text;
+    font-family: 'Trade Winds', cursive;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.description__title3 {
+    color: aquamarine;
+    background-color: aqua;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.card-container2 {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    perspective: 900px;
+    transform: translate(70px, 0px);
+}
+
+.card2 {
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+
+.front,
+.back {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    color: #C6CF86;
+    border-radius: 1rem;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EFE3CC;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 7px;
+}
+
+.card-container2:hover .card2 {
+    transform: rotateY(180deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+    font-size: 14px;
+}
+
+.card-container3 {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    perspective: 900px;
+    transform: translate(90px, 0px);
+}
+
+.card3 {
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+
+.front1,
+.back1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    color: #C6CF86;
+    border-radius: 1rem;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EFE3CC;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 7px;
+}
+
+.card-container3:hover .card3 {
+    transform: rotateY(180deg);
+}
+
+.back1 {
+    transform: rotateY(180deg);
+    font-size: 13px;
+}
+
+.card-container4 {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    perspective: 900px;
+    transform: translate(110px, 0px);
+}
+
+.card4 {
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease;
+}
+
+.front2,
+.back2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    color: #C6CF86;
+    border-radius: 1rem;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EFE3CC;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 7px;
+}
+
+.card-container4:hover .card4 {
+    transform: rotateY(180deg);
+}
+
+.back2 {
+    transform: rotateY(180deg);
+}
+
+.voltar {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    display: grid;
+    place-content: center;
+    font-size: 2.5rem;
+    transition: all .5s;
+}
+
+.voltar:hover {
+    color: #C6CF86;
+}
+
+.logo02{
+ 
+    position: relative;
+    right: 16px;
+    display: grid;
+    justify-content: end;    
+    font-size: 2.5rem;
+
+
+  
+}
